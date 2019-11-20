@@ -44,7 +44,7 @@ router.post('/saveParams', (req, res) => {
 
 //Retrives the URL to send the HTTP GET request to
 router.get('/getRequestUrl', (req, res) => {
-    res.send('https://postman-echo.com/get?')
+    res.send(process.env.CORS_BYPASS + process.env.REQUEST_SITE)
 })
 
 module.exports = router
