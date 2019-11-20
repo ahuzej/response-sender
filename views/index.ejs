@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send a request</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="public/scripts/manageParams.js"></script>
+
+</head>
+<body>
+    <div id="title-header">
+        <h1>Request sender</h1>
+        <h3>Send a test HTTP GET request..</h3>
+    </div>
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-1 col-sm-2">
+
+            </div>
+
+            <div class="col-lg-8 col-md-10 col-sm-8 text-center">
+                <p><span>Note: </span> request will be sent to postman-echo.com</p>
+
+                <h4>Parameter list</h4>
+                <hr>
+                <div id="param-list">
+                    <%- include('_param_fields') %>
+                </div>
+                <a href="#" onClick="newParam()">Add parameter</a>
+                <div id="control-buttons">
+                    <button class="btn btn-primary" onClick="saveParams()">Save</button>
+                    <button class="btn btn-primary" onClick="sendRequest()">Send</button>
+                </div> 
+                <hr>              
+            </div>
+
+            <div class="col-lg-2 col-md-1 col-sm-2">
+                
+            </div>
+
+        </div>
+
+            <div id="response-content" class="row">
+                <div class="col-lg-2 col-md-1 col-sm-2">
+                </div>
+        
+                <div class="col-lg-8 col-md-10 col-sm-8 ">
+                    <p class="font-weight-bold">Request URL: <span id="requestUrl" class="font-weight-normal"></span></p> 
+                    <p class="font-weight-bold">Response code: <span id="responseCode" class="font-weight-normal"></span></p> 
+                    <p class="font-weight-bold">Response message: <span id="responseMessage" class="font-weight-normal"></span></p>            
+                </div>
+                <div class="col-lg-2 col-md-1 col-sm-2">         
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>

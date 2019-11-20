@@ -1,0 +1,21 @@
+<div class="form-inline justify-content-sm-center">
+    <div class="form-row">
+            <label class="font-weight-bold mr-2">Param</label>
+
+        <div class="col">
+                <label class="my-1 mr-2">Key</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Key" name="key" value="<%= param.key %>">
+    
+        </div>
+        <div class="col">
+                <label class="my-1 mr-2">Value</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Value" name="value" value="<%= param.value %>">
+    
+        </div>
+        <div class="col">
+            <label class="my-1 mr-2" style="visibility:hidden">x</label>
+            <button class="btn btn-danger" onClick="removeParam(this)">X</button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+{
+  "name": "task-assigment",
+  "version": "1.0.0",
+  "description": "Sends a HTTP GET request specified with parameters",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Albert Huzejrović",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "sqlite3": "^4.1.0"
+  }
+}
