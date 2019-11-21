@@ -8,6 +8,7 @@ const db = new sqlite.Database(process.env.DATABASE_NAME || 'paramDb.sqlite', (e
         console.log('An error has occured')
     } else {
         console.log('Connected to SQLite database')
+        db.run('CREATE TABLE IF NOT EXISTS params(key text, value text)')
     }
 })
 
