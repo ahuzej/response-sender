@@ -24,7 +24,7 @@
             </div>
 
             <div class="col-lg-8 col-md-10 col-sm-8 text-center">
-                <p><span>Note: </span> request will be sent to postman-echo.com</p>
+                <p><span>Note: </span> request will be sent to <%= process.env.REQUEST_SITE %> </p>
 
                 <h4>Parameter list</h4>
                 <hr>
@@ -36,6 +36,7 @@
                     <button class="btn btn-primary" onClick="saveParams()">Save</button>
                     <button class="btn btn-primary" onClick="sendRequest()">Send</button>
                 </div> 
+                <p id="status-message" class="mt-2" style="display: none;">STATUS: <span></span> </p>
                 <hr>              
             </div>
 

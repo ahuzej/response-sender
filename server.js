@@ -13,20 +13,8 @@ expressApp.set('views', __dirname + '/views')
 expressApp.use('/public', express.static('public'))  
 
 
-const sqlite = require('sqlite3').verbose()
-
 var bodyParser = require('body-parser');
 expressApp.use(bodyParser.json());
-
-const db = new sqlite.Database(process.env.DATABASE_NAME || 'paramDb.sqlite', (err) => {
-    if(err) {
-        console.log('An error has occured')
-    } else {
-        console.log('Connected to SQLite database')
-    }
-})
-
-
  
 
 const indexRouter = require('./routes/index')
